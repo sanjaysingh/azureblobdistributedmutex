@@ -72,8 +72,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <ProjectReference Include="..\AzureBlobDistributedMutex\AzureBlobDistributedMutex.csproj">
+      <Project>{e02fdae0-fe48-40ee-9f2d-0154b70a7948}</Project>
+      <Name>AzureBlobDistributedMutex</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -82,10 +84,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AzureBlobDistributedMutex\AzureBlobDistributedMutex.csproj">
-      <Project>{e02fdae0-fe48-40ee-9f2d-0154b70a7948}</Project>
-      <Name>AzureBlobDistributedMutex</Name>
-    </ProjectReference>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
